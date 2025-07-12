@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional dog training services in West London by Anna. Gentle, effective training methods for puppies and adult dogs."
+    />
+    <meta
+      name="keywords"
+      content="dog training, West London, puppy training, dog behavior, professional dog trainer"
+    />
+    <meta
+      property="og:title"
+      content="PAWPOSE - Professional Dog Training Services"
+    />
+    <meta
+      property="og:description"
+      content="Gentle, effective dog training in West London"
+    />
+    <title>Pawsitive Training - Professional Dog Training Services</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
+
+      :root {
+        --primary-color: #8b4513;
+        --secondary-color: #deb887;
+        --accent-color: #f4a460;
+        --text-dark: #2c3e50;
+        --text-light: #6c757d;
+        --background-light: #fff8dc;
+        --success-color: #4caf50;
+      }
+      /* Apply to all headings */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .hero h1,
+      .section-title h2,
+      .navbar-brand,
+      .service-card h4,
+      .video-title {
+        font-family: "Nunito", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      h1,
+      h2,
+      h3 {
+        letter-spacing: -0.5px; /* Tightens spacing for larger text */
+      }
+
+      /* Scroll Progress Bar */
+      .scroll-progress-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: rgba(139, 69, 19, 0.1);
+        z-index: 9999;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .scroll-progress-bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(
+          90deg,
+          var(--primary-color),
+          var(--accent-color),
+          #ff6b35
+        );
+        background-size: 200% 100%;
+        animation: gradient-flow 3s ease infinite;
+        transition: width 0.1s ease-out;
+        border-radius: 0 2px 2px 0;
+        box-shadow: 0 0 10px rgba(139, 69, 19, 0.3);
+      }
+
+      @keyframes gradient-flow {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      /* Alternative: Solid color version (simpler) */
+      .scroll-progress-bar.solid {
+        background: var(--primary-color);
+        animation: none;
+      }
+
+      /* Pulsing effect when near end */
+      .scroll-progress-bar.near-end {
+        animation: pulse-end 0.5s ease-in-out;
+      }
+
+      @keyframes pulse-end {
+        0%,
+        100% {
+          box-shadow: 0 0 10px rgba(139, 69, 19, 0.3);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(139, 69, 19, 0.6);
+        }
+      }
+
+      /* Navigation */
+      .navbar {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .navbar.scrolled {
+        padding: 0.5rem 0;
+        backdrop-filter: blur(10px);
+        background: rgba(139, 69, 19, 0.95);
+      }
+
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white !important;
+        transition: transform 0.3s ease;
+      }
+
+      .navbar-brand:hover {
+        transform: scale(1.05);
+      }
+
+      .nav-link {
+        color: white !important;
+        font-weight: 600;
+        margin: 0 0.5rem;
+        position: relative;
+        transition: all 0.3s ease;
+        font-size: 1.1rem;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* Navbar Social Media Icons */
+      .navbar-social {
+        align-items: center;
+        margin-left: 1rem;
+      }
+
+      .navbar-social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .navbar-social-link.tiktok {
+        background: rgba(0, 0, 0, 0.8);
+      }
+
+      .navbar-social-link.youtube {
+        background: rgba(255, 0, 0, 0.8);
+      }
+
+      .navbar-social-link:hover {
+        transform: translateY(-2px) scale(1.1);
+        color: white;
+        border-color: rgba(255, 255, 255, 0.6);
+      }
+
+      .navbar-social-link.tiktok:hover {
+        background: rgba(0, 0, 0, 1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar-social-link.youtube:hover {
+        background: rgba(255, 0, 0, 1);
+        box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+      }
+
+      /* Mobile navbar social styling */
+      .navbar-social-mobile {
+        padding-bottom: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin-top: 1rem !important;
+        padding-top: 1rem;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            135deg,
+            rgba(244, 164, 96, 0.08) 0%,
+            rgba(139, 69, 19, 0.04) 100%
+          ),
+          linear-gradient(
+            135deg,
+            var(--background-light),
+            var(--secondary-color)
+          );
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paw" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="5" cy="5" r="1" fill="rgba(139,69,19,0.1)"/><circle cx="15" cy="15" r="1" fill="rgba(139,69,19,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23paw)"/></svg>');
+        opacity: 0.3;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        animation: fadeInUp 1s ease;
+      }
+
+      .hero h1 .highlight {
+        background: linear-gradient(135deg, #f4a460, #ff6b35);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+      }
+
+      .hero .lead {
+        font-size: 1.3rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        animation: fadeInUp 1s ease 0.2s both;
+      }
+
+      /* Hero CTA Button - Gradient Pulse */
+      .btn-hero {
+        background: linear-gradient(
+          45deg,
+          var(--primary-color),
+          var(--accent-color),
+          #ff6b35
+        );
+        background-size: 300% 300%;
+        border: none;
+        color: white;
+        padding: 15px 35px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(139, 69, 19, 0.3);
+        animation: gradient-shift 3s ease infinite;
+        font-size: 1.1rem;
+      }
+
+      .btn-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .btn-hero:hover::before {
+        left: 100%;
+      }
+
+      .btn-hero:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+        color: white;
+        text-decoration: none;
+      }
+
+      .btn-hero:active {
+        transform: translateY(-1px) scale(1.02);
+      }
+
+      @keyframes gradient-shift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .hero-image-container {
+        position: relative;
+        max-width: 60%;
+        margin: 5em auto 0;
+        display: flex;
+        justify-content: center;
+        min-height: 27em;
+      }
+
+      /* Hero Image Fan-out Effect */
+      .img-stack {
+        position: absolute;
+        padding: 1em;
+        background: floralwhite;
+        border: 1px solid #b9ab8e;
+        border-radius: 0.1em;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        transform-origin: center 325%; /*values can also be outside the area of the
+      element itself, to create transformation origin axis above or below the element*/
+        transition: transform 0.5s ease-out;
+      }
+
+      .img-stack__image {
+        max-width: 500px;
+        max-height: 500px;
+      }
+
+      .img-stack:first-child {
+        transform: rotate(3deg);
+      }
+
+      .img-stack:last-child {
+        transform: rotate(-3deg);
+      }
+
+      .hero-image-container:hover .img-stack:first-child {
+        transform: rotate(8deg);
+      }
+
+      .hero-image-container:hover .img-stack:last-child {
+        transform: rotate(-8deg);
+      }
+
+      .img-stack:hover {
+        z-index: 1;
+      }
+
+      /* Sections */
+      section {
+        padding: 5rem 0;
+        position: relative;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+        font-weight: 700;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        border-radius: 2px;
+      }
+
+      /* About Section */
+      .about {
+        background: var(--background-light);
+      }
+
+      .about-content {
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .about-content:hover {
+        transform: translateY(-5px);
+      }
+      /* Approach Cards */
+      .approach-card {
+        display: flex;
+        align-items: flex-start;
+        padding: 1rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(139, 69, 19, 0.1);
+        height: 100%;
+      }
+
+      .approach-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        border-color: var(--accent-color);
+      }
+
+      .approach-icon {
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 0.9rem;
+        margin-right: 1rem;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+      }
+
+      .approach-card:hover .approach-icon {
+        transform: scale(1.1);
+      }
+
+      /* Services Section */
+
+      .service-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        min-height: 1008px;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--accent-color);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-card.reveal {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+        transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .service-card.reveal.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      /* Staggered timing */
+      .service-card.reveal:nth-child(1) {
+        transition-delay: 0s;
+      }
+      .service-card.reveal:nth-child(2) {
+        transition-delay: 0.15s;
+      }
+      .service-card.reveal:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+      .service-card.reveal:nth-child(4) {
+        transition-delay: 0.45s;
+      }
+      .service-card.reveal:nth-child(5) {
+        transition-delay: 0.6s;
+      }
+
+      /* Enhanced hover after animation */
+      .service-card.reveal.active:hover {
+        transform: translateY(-10px) scale(1.03);
+        transition: all 0.3s ease;
+      }
+
+      /* Featured/Most Recommended Service Card */
+      .service-card.featured {
+        background: linear-gradient(
+          135deg,
+          rgba(139, 69, 19, 0.03),
+          rgba(244, 164, 96, 0.05)
+        );
+        border: 2px solid var(--accent-color);
+        box-shadow: 0 15px 50px rgba(139, 69, 19, 0.2);
+        transform: scale(1.02);
+        position: relative;
+        overflow: hidden;
+        min-height: 990px;
+      }
+
+      .service-card.featured::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 69, 19, 0.02),
+          rgba(244, 164, 96, 0.03)
+        );
+        border-radius: 20px;
+        z-index: 1;
+      }
+
+      .service-card.featured > * {
+        position: relative;
+        z-index: 2;
+      }
+
+      .service-card.featured:hover {
+        transform: scale(1.02) translateY(-15px);
+        box-shadow: 0 20px 60px rgba(139, 69, 19, 0.25);
+        border-color: var(--primary-color);
+      }
+
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        margin: 0 auto 1.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover .service-icon {
+        transform: scale(1.1) rotate(10deg);
+      }
+
+      .service-card.featured .service-icon {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3);
+        transform: scale(1.1);
+      }
+
+      .service-card.featured:hover .service-icon {
+        transform: scale(1.2) rotate(10deg);
+      }
+
+      /* Featured badge styling */
+      .service-card.featured .badge {
+        background: linear-gradient(
+          135deg,
+          var(--success-color),
+          #66bb6a
+        ) !important;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+        50% {
+          box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
+        }
+        100% {
+          box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+      }
+
+      /* Gallery Section Styles */
+      .gallery {
+        background: radial-gradient(
+            ellipse at center,
+            rgba(244, 164, 96, 0.06) 0%,
+            transparent 70%
+          ),
+          var(--background-light);
+      }
+
+      .video-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        height: 100%;
+      }
+
+      .video-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent-color);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 280px;
+        overflow: hidden;
+      }
+
+      .video-card video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+      }
+
+      .video-content {
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .video-title {
+        color: var(--primary-color);
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+      }
+
+      .video-description {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      /* Scroll Reveal Animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .section-title h2 {
+          font-size: 2rem;
+        }
+
+        .video-container {
+          height: 220px;
+        }
+
+        .video-content {
+          padding: 1rem;
+        }
+      }
+
+      /* Contact Section */
+      /* 2. Contact Buttons - Ripple Effect */
+      .btn-contact {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        border: none;
+        color: white;
+        padding: 14px 28px;
+        border-radius: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn-contact::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s ease, height 0.6s ease;
+      }
+
+      .btn-contact:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+
+      .btn-contact:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(139, 69, 19, 0.4);
+        color: white;
+      }
+      .contact-info {
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .contact-item:hover {
+        background: var(--background-light);
+        transform: translateX(10px);
+      }
+
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin-right: 1rem;
+      }
+
+      #phone-icon {
+        margin-right: 20px;
+      }
+      #envelope-icon {
+        margin-right: 20px;
+      }
+      #map-icon {
+        margin-right: 20px;
+      }
+      #socialmedia-icon {
+        margin-right: 20px;
+      }
+      /* Social Media Links */
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 47px;
+        height: 47px;
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .social-link.tiktok {
+        background: #000000;
+      }
+
+      .social-link.youtube {
+        background: #ff0000;
+      }
+
+      .social-link:hover {
+        transform: translateY(-2px) scale(1.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        color: white;
+      }
+
+      .social-link.tiktok:hover {
+        background: #2c2c2c;
+      }
+
+      .social-link.youtube:hover {
+        background: #cc0000;
+      }
+
+      .social-link i {
+        transition: transform 0.3s ease;
+      }
+
+      .social-link:hover i {
+        transform: scale(1.1);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--primary-color);
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero .lead {
+          font-size: 1.1rem;
+        }
+
+        .section-title h2 {
+          font-size: 2rem;
+        }
+
+        .floating-paw {
+          display: none;
+        }
+
+        .blog-content {
+          padding: 1.5rem;
+        }
+
+        .btn-floating {
+          width: 56px;
+          height: 56px;
+        }
+
+        .navbar-social-link {
+          width: 48px;
+          height: 48px;
+        }
+
+        .social-link {
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      /* Scroll reveal animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.6s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Floating Action Button */
+      .btn-floating {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        color: white;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+        animation: float-bounce 2s ease-in-out infinite;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-floating:hover {
+        transform: scale(1.15);
+        box-shadow: 0 12px 35px rgba(139, 69, 19, 0.5);
+        animation-play-state: paused;
+      }
+
+      @keyframes float-bounce {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <i class="fas fa-paw me-2"></i>Training with Pawpose
+        </a>
+
+        <!-- Social media icons in navbar -->
+        <div class="navbar-social d-none d-lg-flex">
+          <a
+            href="https://www.tiktok.com/@trainwithpawpose"
+            target="_blank"
+            class="navbar-social-link tiktok me-3"
+          >
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/@trainingwithpawpose?si=ScWo-HX2fWCQ8Ot3"
+            target="_blank"
+            class="navbar-social-link youtube"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Social media icons for mobile -->
+          <div class="navbar-social-mobile d-lg-none mt-3 text-center">
+            <a
+              href="https://www.tiktok.com/@trainwithpawpose"
+              target="_blank"
+              class="navbar-social-link tiktok me-3"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@trainingwithpawpose?si=ScWo-HX2fWCQ8Ot3"
+              target="_blank"
+              class="navbar-social-link youtube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <h1>Training with <span class="highlight">Purpose</span>💫</h1>
+              <p class="lead mt-4">
+                A happy place for happy dogs! Our fun, gentle training helps
+                your dog learn good habits, grow in confidence, and enjoy every
+                step!
+              </p>
+              <a href="#contact" class="btn btn-hero mt-4">
+                <i class="fas fa-phone me-2"></i>Get Started Today
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div class="hero-image-container">
+              <figure class="img-stack">
+                <img
+                  src="./img/hero dog 3.jpeg"
+                  class="img-stack__image"
+                  alt="Hero Banner 1"
+                  loading="lazy"
+                />
+              </figure>
+
+              <figure class="img-stack">
+                <img
+                  src="./img/hero dog 2.jpeg"
+                  class="img-stack__image"
+                  alt="Hero Banner 2"
+                  loading="lazy"
+                />
+              </figure>
+
+              <figure class="img-stack">
+                <img
+                  src="./img/hero banner (2).jpeg"
+                  class="img-stack__image"
+                  alt="Hero Banner 3"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-me">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>About Me</h2>
+          <p class="lead">
+            Passionate about creating positive relationships between dogs and
+            their families
+          </p>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div class="about-image-placeholder reveal">
+              <!-- Personal photo will go here -->
+              <img
+                src="./img/About Me.jpg "
+                alt="Anna - Professional Dog Trainer"
+                loading="lazy"
+                style="
+                  width: 100%;
+                  height: 688px;
+                  object-fit: cover;
+                  border-radius: 20px;
+                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                "
+                class="mb-5"
+              />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="about-me-content reveal">
+              <h3 class="mb-4" style="color: var(--primary-color)">
+                👋 Meet Your Trainer
+              </h3>
+              <p class="mb-4" style="font-size: 1.1rem; line-height: 1.8">
+                Hi, I'm Anna! I didn't start in the dog world. I spent years
+                building a career in a completely different field: structured,
+                demanding, and far from anything to do with dogs. I had degrees,
+                responsibilities, and a clear path laid out in front of me. But
+                deep down, I felt disconnected, like something important was
+                missing.
+              </p>
+              <p class="mb-4" style="font-size: 1.1rem; line-height: 1.8">
+                Ace shook everything I thought I knew. I tried every method I
+                could find: treats, tools, techniques, but nothing worked. I
+                felt like I was failing him completely. Until one day, I stopped
+                following everyone else's advice and started listening to him
+                and to myself. That moment changed everything. I discovered the
+                truth: it's not about controlling dogs. It's about understanding
+                them. And more importantly, understanding ourselves.
+              </p>
+              <p class="mb-4" style="font-size: 1.1rem; line-height: 1.8">
+                That's how Pawpose was born. This is more than dog training;
+                it's a fresh approach to how we live with and lead our dogs. I'm
+                here to help people build genuine relationships with their dogs,
+                free from gimmicks and rooted in trust.
+              </p>
+              <p class="mb-4" style="font-size: 1.1rem; line-height: 1.8">
+                I left my old career behind for this work. Because this isn't
+                just something I do, it's who I am now.
+              </p>
+
+              <div
+                class="mt-4 p-3"
+                style="
+                  background: var(--background-light);
+                  border-radius: 15px;
+                  border-left: 4px solid var(--accent-color);
+                "
+              >
+                <p
+                  class="mb-0"
+                  style="font-style: italic; color: var(--text-dark)"
+                >
+                  "Every dog has the potential to be amazing. My job is to help
+                  you unlock that potential together."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Our Approach Section -->
+    <section class="about">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>About Our Approach</h2>
+          <p class="lead">
+            Building trust and understanding, one paw at a time
+          </p>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <div class="about-content reveal">
+              <h4 class="mb-4" style="color: var(--primary-color)">
+                Training with Purpose, Building Real Results
+              </h4>
+
+              <!-- Mini Cards for approach points -->
+              <div class="row">
+                <div class="col-lg-6 mb-3">
+                  <div class="approach-card">
+                    <div class="approach-icon">
+                      <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div>
+                      <h6
+                        style="
+                          color: var(--primary-color);
+                          margin-bottom: 0.5rem;
+                        "
+                      >
+                        Owner-Focused Training
+                      </h6>
+                      <small style="color: var(--text-light)"
+                        >I train you, not just your dog. Learn to lead with calm
+                        energy and create lasting structure.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 mb-3">
+                  <div class="approach-card">
+                    <div class="approach-icon">
+                      <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div>
+                      <h6
+                        style="
+                          color: var(--primary-color);
+                          margin-bottom: 0.5rem;
+                        "
+                      >
+                        Tailored Methods
+                      </h6>
+                      <small style="color: var(--text-light)"
+                        >Every dog and family is unique. I adapt my approach to
+                        suit your specific challenges.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 mb-3">
+                  <div class="approach-card">
+                    <div class="approach-icon">
+                      <i class="fas fa-shield-heart"></i>
+                    </div>
+                    <div>
+                      <h6
+                        style="
+                          color: var(--primary-color);
+                          margin-bottom: 0.5rem;
+                        "
+                      >
+                        Safe, Judgment-Free Environment
+                      </h6>
+                      <small style="color: var(--text-light)"
+                        >A space for learning and growth. I'll meet you where
+                        you are and support your journey.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 mb-3">
+                  <div class="approach-card">
+                    <div class="approach-icon">
+                      <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div>
+                      <h6
+                        style="
+                          color: var(--primary-color);
+                          margin-bottom: 0.5rem;
+                        "
+                      >
+                        Honest, Clear Guidance
+                      </h6>
+                      <small style="color: var(--text-light)"
+                        >Straightforward advice and specific action steps to
+                        continue progress at home.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-12 mb-3">
+                  <div class="approach-card">
+                    <div class="approach-icon">
+                      <i class="fa-solid fa-people-arrows"></i>
+                    </div>
+                    <div>
+                      <h6
+                        style="
+                          color: var(--primary-color);
+                          margin-bottom: 0.5rem;
+                        "
+                      >
+                        Real Bonds, Not Just Obedience
+                      </h6>
+                      <small style="color: var(--text-light)"
+                        >We build relationships based on trust, calmness, and
+                        mutual respect. When that foundation is solid, obedience
+                        becomes effortless.</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="approach-images">
+              <!-- First image -->
+              <div class="approach-image-placeholder reveal mb-3">
+                <div class="approach-image-placeholder reveal">
+                  <img
+                    src="./img/image copy.png"
+                    alt="Anna training Ace"
+                    style="
+                      width: 100%;
+                      height: 425px;
+                      object-fit: cover;
+                      padding: 1em;
+                      background: floralwhite;
+                      border: 1px solid #b9ab8e;
+                      border-radius: 0.5em;
+                      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                    "
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <!-- Second image -->
+              <div class="approach-image-placeholder reveal">
+                <div class="approach-image-placeholder reveal">
+                  <img
+                    src="./img/image copy 4.png"
+                    alt="2 dogs trained by Anna"
+                    style="
+                      width: 100%;
+                      height: 425px;
+                      object-fit: cover;
+                      padding: 1em;
+                      background: floralwhite;
+                      border: 1px solid #b9ab8e;
+                      border-radius: 0.5em;
+                      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                    "
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Training Services</h2>
+          <p class="lead">Professional packages designed for lasting results</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card featured reveal">
+              <div class="service-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="text-center mb-2">
+                <span
+                  class="badge bg-success"
+                  style="font-size: 0.8rem; margin-bottom: 1rem"
+                  >MOST RECOMMENDED</span
+                >
+              </div>
+              <h4 class="text-center mb-3" style="color: var(--primary-color)">
+                5-Session Advanced Training
+              </h4>
+              <div class="text-center mb-3">
+                <span
+                  style="
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--primary-color);
+                  "
+                  >£250</span
+                >
+                <div style="font-size: 0.9rem; color: var(--text-light)">
+                  2 hours each session
+                </div>
+              </div>
+              <p class="text-center">
+                My most recommended package for real results. It allows us to go
+                deep, change habits, and build a lasting structure for your dog.
+              </p>
+
+              <!-- Separator line -->
+              <div
+                style="
+                  width: 40px;
+                  height: 2px;
+                  background: linear-gradient(
+                    135deg,
+                    var(--primary-color),
+                    var(--accent-color)
+                  );
+                  margin: 1.5rem auto;
+                  border-radius: 1px;
+                "
+              ></div>
+
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Comprehensive behavioural transformation
+                </li>
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Lasting habit changes
+                </li>
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Structured training plan
+                </li>
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Ongoing support between sessions
+                </li>
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Family training & coaching sessions
+                </li>
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Emergency guidance & follow-up support
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card reveal">
+              <div class="service-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h4 class="text-center mb-3" style="color: var(--primary-color)">
+                Beginner Pack
+              </h4>
+              <div class="text-center mb-3">
+                <span
+                  style="
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--primary-color);
+                  "
+                  >£75</span
+                >
+                <div style="font-size: 0.9rem; color: var(--text-light)">
+                  3 x 2 hour sessions
+                </div>
+              </div>
+              <p class="text-center">
+                A great option to get started and learn the core principles of
+                calm, structured training. Ideal for new clients who want to
+                understand my method before fully committing.
+              </p>
+
+              <!-- Separator line -->
+              <div
+                style="
+                  width: 40px;
+                  height: 2px;
+                  background: linear-gradient(
+                    135deg,
+                    var(--primary-color),
+                    var(--accent-color)
+                  );
+                  margin: 1.5rem auto;
+                  border-radius: 1px;
+                "
+              ></div>
+
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Core training principles
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Calm, structured approach
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Foundation building
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Perfect introduction to my methods
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card reveal">
+              <div class="service-icon">
+                <i class="fas fa-baby"></i>
+              </div>
+              <h4 class="text-center mb-3" style="color: var(--primary-color)">
+                Puppy Pack
+              </h4>
+              <div class="text-center mb-3">
+                <span
+                  style="
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--primary-color);
+                  "
+                  >£65</span
+                >
+                <div style="font-size: 0.9rem; color: var(--text-light)">
+                  3 x 1 hour sessions
+                </div>
+              </div>
+              <p class="text-center">
+                Specifically designed for puppies under 6 months, focusing on
+                establishing essential developmental foundations: routine,
+                calmness, and trust-building from day one.
+              </p>
+
+              <!-- Separator line -->
+              <div
+                style="
+                  width: 40px;
+                  height: 2px;
+                  background: linear-gradient(
+                    135deg,
+                    var(--primary-color),
+                    var(--accent-color)
+                  );
+                  margin: 1.5rem auto;
+                  border-radius: 1px;
+                "
+              ></div>
+
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Early foundation training
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Routine establishment
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Calmness training
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Trust building from day one
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card reveal">
+              <div class="service-icon">
+                <i class="fas fa-walking"></i>
+              </div>
+              <h4 class="text-center mb-3" style="color: var(--primary-color)">
+                Real-World Training Session
+              </h4>
+              <div class="text-center mb-3">
+                <span
+                  style="
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--primary-color);
+                  "
+                  >£40</span
+                >
+                <div style="font-size: 0.9rem; color: var(--text-light)">
+                  1 hour session
+                </div>
+              </div>
+              <p class="text-center">
+                Structured, focused walk sessions to work on leash pulling,
+                reactivity, or building calm focus in real-world settings.
+              </p>
+
+              <!-- Separator line -->
+              <div
+                style="
+                  width: 40px;
+                  height: 2px;
+                  background: linear-gradient(
+                    135deg,
+                    var(--primary-color),
+                    var(--accent-color)
+                  );
+                  margin: 1.5rem auto;
+                  border-radius: 1px;
+                "
+              ></div>
+
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Leash pulling solutions
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Reactivity management
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Real-world training
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Calm focus building
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card reveal">
+              <div class="service-icon">
+                <i class="fas fa-laptop"></i>
+              </div>
+              <h4 class="text-center mb-3" style="color: var(--primary-color)">
+                Online Behavioural Consultation
+              </h4>
+              <div class="text-center mb-3">
+                <span
+                  style="
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--primary-color);
+                  "
+                  >£30</span
+                >
+                <div style="font-size: 0.9rem; color: var(--text-light)">
+                  1 hour session + training
+                </div>
+              </div>
+              <p class="text-center">
+                Perfect for remote support or early guidance, including tailored
+                advice, structure plans, and Q&A from the comfort of your home.
+              </p>
+
+              <!-- Separator line -->
+              <div
+                style="
+                  width: 40px;
+                  height: 2px;
+                  background: linear-gradient(
+                    135deg,
+                    var(--primary-color),
+                    var(--accent-color)
+                  );
+                  margin: 1.5rem auto;
+                  border-radius: 1px;
+                "
+              ></div>
+
+              <ul class="list-unstyled mt-3">
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Tailored behavioural advice
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Custom structure plans
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >Expert Q&A session
+                </li>
+                <br />
+                <li>
+                  <i
+                    class="fas fa-check me-2"
+                    style="color: var(--success-color)"
+                  ></i
+                  >From your own home
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Training in Action</h2>
+          <p class="lead">
+            See Anna's training methods and real results with dogs
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="video-card reveal">
+              <div class="video-container">
+                <video controls preload="metadata" loading="lazy">
+                  <source src="./video/Dog 1.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-content">
+                <h5 class="video-title">Perfect Heel & Focus with Oscar</h5>
+                <p class="video-description">
+                  Oscar waits patiently at the roadside, follows Anna's lead
+                  with perfect timing, and heels on command while maintaining
+                  full attention without distractions like sniffing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="video-card reveal">
+              <div class="video-container">
+                <video controls preload="metadata" loading="lazy">
+                  <source src="./video/Dog 2.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-content">
+                <h5 class="video-title">Immediate Recall with Callie</h5>
+                <p class="video-description">
+                  Callie walks attentively beside Anna, checking in regularly.
+                  When distracted by sniffing, she immediately responds to the
+                  heel command, showing excellent focus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="video-card reveal">
+              <div class="video-container">
+                <video controls preload="metadata" loading="lazy">
+                  <source src="./video/Dog 3.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-content">
+                <h5 class="video-title">Owner Interaction with Bobby</h5>
+                <p class="video-description">
+                  Bobby responds to hand signals for sit, then shows incredible
+                  recall by leaving a ball mid-chase to return to his owner and
+                  lie down awaiting the next command.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="video-card reveal">
+              <div class="video-container">
+                <video controls preload="metadata" loading="lazy">
+                  <source src="./video/Dog 4.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-content">
+                <h5 class="video-title">Impulse Control with Oscar</h5>
+                <p class="video-description">
+                  Oscar responds to his name and sits on command. When
+                  distracted again, he instantly responds to Anna's "down" cue,
+                  showing intelligent focus and adaptability.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="video-card reveal">
+              <div class="video-container">
+                <video controls preload="metadata" loading="lazy">
+                  <source src="./video/Dog 5.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-content">
+                <h5 class="video-title">Calm Focus with Callie</h5>
+                <p class="video-description">
+                  Callie maintains a perfect sit-stay throughout the entire
+                  session, staying alert and observant while remaining
+                  completely focused and undistracted in a public park.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="video-card reveal">
+              <div class="video-container">
+                <video controls preload="metadata" loading="lazy">
+                  <source src="./video/Dog 6.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-content">
+                <h5 class="video-title">Perfect Walking with Bobby</h5>
+                <p class="video-description">
+                  There is no pulling, no distractions, complete focus on the
+                  handler. Bobby matches pace perfectly while maintaining
+                  constant check-ins with their owner.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Get In Touch</h2>
+          <p class="lead">
+            Ready to start your dog's training journey? Let's chat!
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="contact-info reveal">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="contact-item">
+                    <div>
+                      <h5 style="color: var(--primary-color)">
+                        <i class="fas fa-phone" id="phone-icon"></i> Phone
+                      </h5>
+                      <p class="mb-0">+44 7446944412</p>
+                      <small class="text-muted">Call or text anytime</small>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div>
+                      <h5 style="color: var(--primary-color)">
+                        <i class="fas fa-envelope" id="envelope-icon"></i> Email
+                      </h5>
+                      <p class="mb-0">trainingwithpawpose25@gmail.com</p>
+                      <small class="text-muted"
+                        >Quick response guaranteed</small
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="contact-item">
+                    <div>
+                      <h5 style="color: var(--primary-color)">
+                        <i class="fas fa-map-marker-alt" id="map-icon"></i>
+                        Service Area
+                      </h5>
+                      <p class="mb-0">West London</p>
+                      <small class="text-muted">In-home visits available</small>
+                    </div>
+                  </div>
+
+                  <div class="contact-item">
+                    <div>
+                      <h5 style="color: var(--primary-color)">
+                        <i class="fas fa-share-alt" id="socialmedia-icon"></i>
+                        Social Media
+                      </h5>
+                      <div class="d-flex align-items-center">
+                        <p class="mt-2">
+                          <a
+                            href="https://www.tiktok.com/@trainwithpawpose"
+                            target="_blank"
+                            class="social-link tiktok me-3"
+                          >
+                            <i class="fab fa-tiktok"></i>
+                          </a>
+                          <a
+                            href="https://www.youtube.com/@trainingwithpawpose?si=ScWo-HX2fWCQ8Ot3"
+                            target="_blank"
+                            class="social-link youtube"
+                          >
+                            <i class="fab fa-youtube"></i>
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-4">
+                <a href="tel:07446944412" class="btn btn-contact me-3">
+                  <i class="fas fa-phone me-2"></i>Call Now
+                </a>
+                <a href="mailto:annaknesterova@mail.ru" class="btn btn-contact">
+                  <i class="fas fa-envelope me-2"></i>Send Email
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5><i class="fas fa-paw me-2"></i>Training with Pawpose</h5>
+            <p class="mb-0">
+              Professional dog training with love, patience, and care.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">
+              &copy; 2025 Training with Pawpose. All rights reserved.
+            </p>
+            <small>Building better relationships, one paw at a time.</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="btn-floating" onclick="handleFloatingContact()">
+      <i class="fas fa-phone"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Scroll Progress Bar
+      function updateScrollProgress() {
+        const scrollProgress = document.getElementById("scrollProgress");
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        scrollProgress.style.width = scrollPercent + "%";
+
+        // Add special effect when near end (95%+)
+        if (scrollPercent >= 95) {
+          scrollProgress.classList.add("near-end");
+        } else {
+          scrollProgress.classList.remove("near-end");
+        }
+      }
+
+      // Update progress on scroll
+      window.addEventListener("scroll", updateScrollProgress);
+
+      // Update progress on load
+      window.addEventListener("load", updateScrollProgress);
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 100) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add some interactive effects
+      document.querySelectorAll(".service-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-10px) scale(1.02)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0) scale(1)";
+        });
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          const navbarCollapse = document.querySelector(".navbar-collapse");
+          if (navbarCollapse.classList.contains("show")) {
+            navbarCollapse.classList.remove("show");
+          }
+        });
+      });
+
+      // Add loading animation
+      window.addEventListener("load", function () {
+        document.body.style.opacity = "0";
+        document.body.style.transition = "opacity 0.5s ease";
+        setTimeout(() => {
+          document.body.style.opacity = "1";
+        }, 100);
+      });
+
+      // Scroll reveal animation
+      function reveal() {
+        const reveals = document.querySelectorAll(".reveal");
+
+        for (let i = 0; i < reveals.length; i++) {
+          const windowHeight = window.innerHeight;
+          const elementTop = reveals[i].getBoundingClientRect().top;
+          const elementVisible = 150;
+
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+      reveal(); // Check on load
+
+      // Video card hover effects
+      document.querySelectorAll(".video-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.transform = "translateY(-5px) scale(1.02)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.transform = "translateY(0) scale(1)";
+        });
+      });
+
+      // Optional: Pause other videos when one starts playing
+      document.querySelectorAll("video").forEach((video) => {
+        video.addEventListener("play", function () {
+          // Pause all other videos
+          document.querySelectorAll("video").forEach((otherVideo) => {
+            if (otherVideo !== video && !otherVideo.paused) {
+              otherVideo.pause();
+            }
+          });
+        });
+      });
+
+      // Floating button action - scroll to contact section
+      function handleFloatingContact() {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+          contactSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
