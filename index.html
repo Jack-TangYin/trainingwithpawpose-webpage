@@ -30,6 +30,10 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap");
 
@@ -394,24 +398,24 @@
       }
 
       .img-stack__image {
-        max-width: 500px;
-        max-height: 500px;
+        max-width: 400px;
+        max-height: 400px;
       }
 
       .img-stack:first-child {
-        transform: rotate(3deg);
+        transform: rotate(2deg);
       }
 
       .img-stack:last-child {
-        transform: rotate(-3deg);
+        transform: rotate(-2deg);
       }
 
       .hero-image-container:hover .img-stack:first-child {
-        transform: rotate(8deg);
+        transform: rotate(3deg);
       }
 
       .hero-image-container:hover .img-stack:last-child {
-        transform: rotate(-8deg);
+        transform: rotate(-3deg);
       }
 
       .img-stack:hover {
